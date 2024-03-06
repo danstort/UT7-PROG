@@ -6,16 +6,34 @@ package POOEj1H1;
 
 /**
  *
- * @author danielsotoortiz
+ * @author danie
  */
-abstract class Vehiculo {
-   
-   protected String matricula; 
-   protected double km;
-   protected double annoMatricula;
-   
-   
-   abstract public String vidaUtil();
+class Camion extends Vehiculo {
+
+    double tonelaje;
+    double altura;
+
+    @Override
+    public String vidaUtil() {
+
+        return "Vida útil coche 5 años";
+    }
+
+    public double getTonelaje() {
+        return tonelaje;
+    }
+
+    public void setTonelaje(double tonelaje) {
+        this.tonelaje = tonelaje;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
 
     public String getMatricula() {
         return matricula;
@@ -40,7 +58,7 @@ abstract class Vehiculo {
     public void setAnnoMatricula(double annoMatricula) {
         this.annoMatricula = annoMatricula;
     }
-   
-   
-   
+    
+    
+
 }
