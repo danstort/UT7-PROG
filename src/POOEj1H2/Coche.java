@@ -51,4 +51,15 @@ public class Coche {
        
     }
     
+    protected int cambiaMarcha(){
+    
+        if (this.velocidad==20) {
+            return 1;
+        } else if (this.velocidad==20){
+            return 2;
+        } else {
+        return 3;
+        }
+    }
+    
 }
