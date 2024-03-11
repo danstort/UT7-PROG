@@ -4,19 +4,21 @@ class Pelicula extends Multimedia {
 
     private String actor;
     private String actriz;
-    private Formato formato;
+    
 
     public Pelicula() {
     }
 
-    public Pelicula(String actor, String actriz, Formato formato, String titulo, String autor, int duracion) throws excepcion {
-        super(titulo, autor, duracion);
+    public Pelicula(String actor, String actriz) {
         this.actor = actor;
         this.actriz = actriz;
-        this.formato = formato;
     }
 
-   
+    public Pelicula(String actor, String actriz, String titulo, String autor, Formato formato, int duracion) throws excepcion {
+        super(titulo, autor, formato, duracion);
+        this.actor = actor;
+        this.actriz = actriz;
+    }
 
     public String getActor() {
         return actor;
@@ -48,17 +50,14 @@ class Pelicula extends Multimedia {
         return duracion;
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
-
-    public Formato getFormato() {
-        return formato;
-    }
-
     public void setFormato(Formato formato) {
         this.formato = formato;
     }
+
+    
+
+    
+
 
     public void setActor(String actor) {
         this.actor = actor;
@@ -70,8 +69,10 @@ class Pelicula extends Multimedia {
 
     @Override
     public String toString() {
-        return "Pelicula{" + "actor=" + actor + ", actriz=" + actriz + ", formato=" + formato + '}';
+        return "Pelicula{" + "actor=" + actor + ", actriz=" + actriz + '}';
     }
+
+    
 
     
     

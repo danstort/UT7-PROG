@@ -1,6 +1,5 @@
 package POOEj1H2;
 
-
 import java.util.Objects;
 
 /**
@@ -8,14 +7,29 @@ import java.util.Objects;
  * @author Usuario
  */
 public class Multimedia {
-    
+
     protected String titulo;
     protected String autor;
-   
+    protected Formato formato;
     protected int duracion;
-    
-    //para crear una excecion es como una clase independiente
 
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public void setDuracion(int duracion) throws excepcion{
+        if (duracion<0){
+            throw new excepcion();
+        }
+        this.duracion = duracion;
+    }
+
+    
+    
     public String getTitulo() {
         return titulo;
     }
@@ -28,17 +42,28 @@ public class Multimedia {
         return duracion;
     }
 
+    public Formato getFormato() {
+        return formato;
+    }
+
+    public void setFormato(Formato formato) throws excepcion{
+        this.formato = formato;
+    }
+    
     public Multimedia() {
     }
 
-    public Multimedia(String titulo, String autor, int duracion) throws excepcion {
+    public Multimedia(String titulo, String autor, Formato formato, int duracion) throws excepcion{
         this.titulo = titulo;
         this.autor = autor;
+        this.formato = formato;
         if (duracion<0){
             throw new excepcion();
         }
         this.duracion = duracion;
     }
+
+    
 
     @Override
     public int hashCode() {
@@ -64,14 +89,15 @@ public class Multimedia {
         return Objects.equals(this.autor, other.autor);
     }
 
-   
-
     @Override
     public String toString() {
         return "Multimedia{" + "titulo=" + titulo + ", autor=" + autor + ", duracion=" + duracion + '}';
     }
+
     
 }
- enum Formato {
-        wav, mp3, mp4;
-    }
+
+enum Formato {
+    wav, mp3, mp4;
+}
+
