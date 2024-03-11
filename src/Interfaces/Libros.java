@@ -1,9 +1,10 @@
 package Interfaces;
 
-class Libros extends Libro{
+class Libros extends Libro implements Prestable{
 
     private boolean prestado = false;
-
+    
+    
     public boolean prestado() {
         return prestado;
     }
