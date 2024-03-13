@@ -1,15 +1,14 @@
 package POOEj1H2;
 
-
 import java.util.Scanner;
 
 public class mainMultimedia {
 
-    public static void main(String[] args) throws excepcion{
+    public static void main(String[] args) throws excepcion {
 
         try {
             Scanner teclado = new Scanner(System.in);
-            System.out.println("Indica que dispositivo deseas crear película (p) o disco (d) :");
+            System.out.println("Indica que dispositivo deseas crear película (p) o disco (d) ");
             char tipo = teclado.nextLine().charAt(0);
             String titulo = teclado.nextLine();
             String autor = teclado.nextLine();
@@ -50,7 +49,12 @@ public class mainMultimedia {
 
                     teclado.nextLine();
                     String genero = teclado.nextLine();
-                    System.out.println(genero);
+                    System.out.println("Selecciona el genero: \n"
+                            + "rock\n"
+                            + "pop\n"
+                            + "soul\n"
+                            + "blues\n"
+                            + "clásica");
                     Estilo estilo = null;
 
                     if (genero.equalsIgnoreCase("rock")) {

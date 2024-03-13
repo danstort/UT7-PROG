@@ -6,7 +6,7 @@ import java.util.Objects;
  *
  * @author Usuario
  */
-public class Multimedia {
+class Multimedia {
 
     protected String titulo;
     protected String autor;
