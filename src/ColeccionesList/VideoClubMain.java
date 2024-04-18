@@ -21,8 +21,9 @@ public class VideoClubMain {
         v.mostrarPeliculas();
         
         System.out.println("Indicar título de la pelicula a eliminar");
-        System.out.println("Listado de peliculas");   
         v.eliminarPorTitulo(tec.nextLine());
+        System.out.println("Listado de peliculas");   
+        
         v.mostrarPeliculas();
         
     }
