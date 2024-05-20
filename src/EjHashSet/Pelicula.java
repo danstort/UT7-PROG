@@ -11,7 +11,7 @@ import java.util.Objects;
  * @author danie
  */
 public class Pelicula {
-    
+
     String titulo;
     String descripcion;
     boolean prestada;
@@ -42,7 +42,12 @@ public class Pelicula {
 
     @Override
     public String toString() {
-        return "Pelicula{" + "titulo=" + titulo + ", descripcion=" + descripcion + ", prestada=" + prestada + '}';
+        if (prestada) {
+            return "Pelicula{" + "titulo=" + titulo + ", descripcion=" + descripcion + ", disponible=no"+'}';
+        } else {
+            return "Pelicula{" + "titulo=" + titulo + ", descripcion=" + descripcion + ", disponible=Si" + '}';
+
+        }
     }
 
     public Pelicula(String titulo, String descripcion) {
@@ -73,9 +78,5 @@ public class Pelicula {
         }
         return Objects.equals(this.descripcion, other.descripcion);
     }
-    
-    
-    
-    
-    
+
 }

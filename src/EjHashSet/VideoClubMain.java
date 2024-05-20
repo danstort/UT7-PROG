@@ -17,6 +17,9 @@ public class VideoClubMain {
         Pelicula p1 = new Pelicula(tec.nextLine(), tec.nextLine());        
         v.insertarPelicula(p1);
         
+        Pelicula p2 = new Pelicula(tec.nextLine(), tec.nextLine());        
+        v.insertarPelicula(p2);
+        
 
         System.out.println("Indicar título de la pelicula a eliminar");
         v.eliminarPorTitulo(tec.nextLine());
